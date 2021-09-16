@@ -1,4 +1,4 @@
-# PolandGeoJson
+# [PolandGeoJson](https://github.com/jusuff/PolandGeoJson/)
 
 Set of Polish administrative borders in geoJson format.
 
@@ -9,9 +9,9 @@ This data was prepared for the project <https://atlasnienawisci.pl>. Because I d
 ## Sources
 
 The borders were prepared on the basis of the following sources and tools:
-* administrative boundaries of municipalities downloaded in the shapefile from https://gis-support.pl/granice-administracyjne/
-* simplifying boundaries and converting from shatefile to geoJson using https://mapshaper.org/
-* dissolving municipalities borders to obtain the borders of counties, voivodships and the country using the [dissolve] library (https://github.com/deoxxa/dissolve)
+* administrative boundaries of municipalities downloaded in the shapefile from <https://gis-support.pl/granice-administracyjne/>
+* simplifying boundaries and converting from shatefile to geoJson using <https://mapshaper.org/>
+* dissolving municipalities borders to obtain the borders of counties, voivodships and the country using the [dissolve library](https://github.com/deoxxa/dissolve)
 
 
 ## File syntax
@@ -20,14 +20,14 @@ The files contain the standard geoJson feature collections. For each element, th
 * name - unit name
 * terc - unit TERC code
 
-The primary identifier is TERC. The code base (TERC basic) and code syntax are available on the [GUS website] (http://eteryt.stat.gov.pl/eTeryt/rerezent_teryt/udostepwanie_danych/baza_teryt/uzytkownicy_indywidualni/pobarcie/pliki_pelne.aspx?contrast=default)
+The primary identifier is TERC. The code base (TERC basic) and code syntax are available on the [GUS website](http://eteryt.stat.gov.pl/eTeryt/rerezent_teryt/udostepwanie_danych/baza_teryt/uzytkownicy_indywidualni/pobarcie/pliki_pelne.aspx?contrast=default)
 
 ## How to generate borders yourself?
 
 The borders provided here are greatly simplified (although the file with the borders of municipalities is still over 3Mb). If you need more precise borders, you can generate them yourself. Below is a description of how I generated provided data:
 
-1. Download administrative borders from https://gis-support.pl/granice-administracyjne/. There are borders available, in shapefile format, for all administrative levels - all you need is municipalities. On their basis, you can generate the boundaries of counties, voivodships and country, maintaining a perfect match.
-2. Convert the shapefile to geoJson format and simplify the boundaries (if you need). I used https://mapshaper.org/ - it allows both simplification and conversion to geoJson.
+1. Download administrative borders from <https://gis-support.pl/granice-administracyjne/>. There are borders available, in shapefile format, for all administrative levels - all you need is municipalities. On their basis, you can generate the boundaries of counties, voivodships and country, maintaining a perfect match.
+2. Convert the shapefile to geoJson format and simplify the boundaries (if you need). I used <https://mapshaper.org/> - it allows both simplification and conversion to geoJson.
 3. On the basis of municipalities boundaries generate boundaries of counties, voivodships and the country using the dissolve library. This way, even if you simplify the municipal borders, you will keep them perfectly aligned. Use the TERC database to connect municipalities into counties and counties into voivodships. At the end of this page you can find example of script to dissolve borders.
 4. Done - You have the boundary sets of the desired accuracy that fit together perfectly.
 
