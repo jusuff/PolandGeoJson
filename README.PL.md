@@ -1,4 +1,4 @@
-# PolandGeoJson
+# [PolandGeoJson](https://github.com/jusuff/PolandGeoJson/)
 
 Zestaw granic administracyjnych Polski w formacie geoJson. 
 
@@ -9,8 +9,8 @@ Dane zostały przygotowane dla projektu <https://atlasnienawisci.pl>. Ponieważ 
 ## Źrodła
 
 Granice zostały wykonane w opraciu o następujące źrodła i narzędzia:
-* granice administracyjne gmin pobrane w shapefile ze strony https://gis-support.pl/granice-administracyjne/
-* uproszczenie granic i konwersja z shatefile do geoJson za pomocą https://mapshaper.org/
+* granice administracyjne gmin pobrane w shapefile ze strony <https://gis-support.pl/granice-administracyjne/>
+* uproszczenie granic i konwersja z shatefile do geoJson za pomocą <https://mapshaper.org/>
 * łączenie granic gmin do uzyskania granic powiatów, województw i kraju za pomocą biblioteki [dissolve](https://github.com/deoxxa/dissolve)
 
 
@@ -26,8 +26,8 @@ Podstawowym identyfikatorem jest TERC. Baza kodów (TERC podstawowy) i składnia
 
 Udostępnione tutaj granice są mocno uproszczone (choć nadal plik z granicami gmin ma ponad 3Mb). Jeśli potrzebujesz dokładniejszych granic, możesz wygenerować granice samodzielnie. Poniżej opis sposobu, w jakim wygenerowałem te dane, które udostępniam:
 
-1. Pobierz granice administracyjne z https://gis-support.pl/granice-administracyjne/. Są tam dostępne, w formacie shapefile, granice dla wszystkich poziomów administracyjnych - potrzebujesz tylko gmin. Na ich bazie możesz wygenerować granice powiatów, województ i kraju, zachowując idealne dopasowanie.
-2. Skonwertuj plik shapefile do formatu geoJson oraz ewentualnie uprość granice. Ja użyłem https://mapshaper.org/ - pozwala zarówno na uproszczenie jak i konwersję do geoJson. 
+1. Pobierz granice administracyjne z <https://gis-support.pl/granice-administracyjne/>. Są tam dostępne, w formacie shapefile, granice dla wszystkich poziomów administracyjnych - potrzebujesz tylko gmin. Na ich bazie możesz wygenerować granice powiatów, województ i kraju, zachowując idealne dopasowanie.
+2. Skonwertuj plik shapefile do formatu geoJson oraz ewentualnie uprość granice. Ja użyłem <https://mapshaper.org/> - pozwala zarówno na uproszczenie jak i konwersję do geoJson. 
 3. Na bazie granic gmin wygeneruj granice powiatów, województw i kraju używając bilbioleki dissolve. W ten sposób, nawet po uproszczeniu granic gmin, zachowasz idealne dopasowanie granic. Skorzystaj z bazy TERC do łączenia gmin w powiaty i powiatów w województwa. Na końcu przykład skryptu do łączenia granic.
 4. Gotowe - masz zestawy granic, o porządanej dokłądności, idealnie do siebie pasujące.
 
